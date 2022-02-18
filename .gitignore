@@ -1,0 +1,9 @@
+.env
+./node-modules
+node_modules
+
+./logs
+.vscode
+.vscode/
+.vscode
+/logs
