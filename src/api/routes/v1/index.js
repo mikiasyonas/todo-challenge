@@ -3,9 +3,9 @@ const express = require('express');
 const indexRouter = express.Router();
 
 const authRouter = require('./auth.routes');
-const botRouter = require('./bot');
+const todoRouter = require('./todo.routes');
 
 indexRouter.use('/auth', authRouter);
-indexRouter.use('/bot', botRouter);
+indexRouter.use('/todo', todoRouter);
 
 module.exports = indexRouter;

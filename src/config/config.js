@@ -19,6 +19,8 @@ const development = {
     host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 27017,
     name: process.env.DB_NAME || 'randChat',
+    username: process.env.DB_USERNAME || 'mikiasyonas',
+    password: process.env.DB_PASSWORD || 'mikias',
   },
 };
 

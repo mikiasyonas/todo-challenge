@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const config = require('../config/config');
 const {serverLogger} = require('../helpers/logger/serverLogger');
 
-const dbURI = `mongodb://${ config.db.host }:${ config.db.port }/${ config.db.name }`;
+// const dbURI = `mongodb://${ config.db.host }:${ config.db.port }/${ config.db.name }`;
+
+const dbURI = `mongodb+srv://${config.db.username}:${config.db.password}@cluster0.iqi6d.mongodb.net/${config.db.name}?retryWrites=true&w=majority`;
 
 const connectToDatabase = () => {
   mongoose.connect(dbURI, {
