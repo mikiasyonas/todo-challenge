@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 const express = require('express');
 const cookieParser = require('cookie-parser');
-const connectToDatabase = require('./database/db');
 const cors = require('cors');
 const v1Routes = require('./api/routes/v1');
 const helmet = require('helmet');
@@ -29,8 +28,6 @@ app.use(mongoSanitize());
 
 // Parse Cookie On req.cookies
 app.use(cookieParser());
-
-connectToDatabase();
 
 app.use(httpLogger);
 

@@ -7,8 +7,11 @@ const centralErrorHandler = require('./helpers/error/centralErrorHandler');
 const serverTerminator = require('./utils/serverTerminator');
 const socket = require('./socket');
 
+const connectToDatabase = require('./database/db');
+
 const PORT = config.app.port;
 const SOCKET_PORT = config.app.socket_port;
+connectToDatabase();
 
 global.server = app.listen(PORT, () => {
   serverLogger.info(`Server Started And Listening On Port ${PORT}`);
